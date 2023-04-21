@@ -133,14 +133,11 @@ pipeline {
     	//	}
     	//}
     	stage ('Upload artifact') {
-    		when {
-                branch 'master' 
-            }
             steps {
                 rtServer (
                     id: "ARTIFACTORY_SERVER",
                     url: "http://localhost:8080/artifactory",
-		    credentialsId: 'admin.jfrog'
+		            credentialsId: 'admin.jfrog'
                 )
 
                 rtMavenDeployer (
