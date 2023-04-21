@@ -21,7 +21,7 @@ pipeline {
                     spec: """{
                             "files": [
                                     {
-                                        "pattern": "target/maths-1.3.jar",
+                                        "pattern": "/var/jenkins_home/workspace/calculate/maths/target/maths-1.3.jar",
                                         "target": "libs-snapshot-local"
                                     }
                                 ]
