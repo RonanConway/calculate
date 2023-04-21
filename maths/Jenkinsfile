@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Execute build steps here, for example:
-                sh 'mvn clean install'
+                sh 'mvn clean install -f maths/pom.xml'
             }
         }
         
