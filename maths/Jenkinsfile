@@ -20,7 +20,6 @@ pipeline {
         				always {
             				// junit 'maths/target/surefire-reports/junitreports/*.xml'
             				step( [ $class: 'JacocoPublisher' ] ) 
-            				step( [ $class: 'JUnitTestReportPublisher', fileIncludePattern: 'maths/target/surefire-reports/junitreports/*.xml' ])
         				}
     				}
         		}
@@ -140,7 +139,7 @@ pipeline {
             steps {
                 rtServer (
                     id: "ARTIFACTORY_SERVER",
-                    url: "http://localhost:8086/artifactory",
+                    url: "http://localhost:8080/artifactory",
 		    credentialsId: 'admin.jfrog'
                 )
 
